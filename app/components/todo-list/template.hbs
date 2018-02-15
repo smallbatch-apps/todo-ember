@@ -1,0 +1,12 @@
+<ul class="list-group">
+{{#each items as |item|}}
+  <li class="list-group-item">
+    {{yield (hash 
+        isEditing=item.isEditing
+        show=(component 'todo-item' item=item)
+        edit=(component 'todo-edit' item=item)
+      )
+    }}
+  </li>
+{{/each}}
+</ul>

@@ -1,0 +1,12 @@
+<h2>Todo List</h2>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint commodi amet id nemo fugit sequi similique ea atque nihil. Eum, corporis aspernatur. Quia quaerat doloribus itaque sit dolorem, dolore reiciendis.</p>
+
+{{#todo-list items=model as |item|}}
+  {{#if item.isEditing}}
+    {{item.edit onSave=(action 'saveItem')  onCancel=(action 'cancelItem')}}
+  {{else}}
+    {{item.show onCheck=(action 'saveItem')}}
+  {{/if}}
+{{/todo-list}}
+<button {{action 'createItem'}} class="btn btn-primary">{{fa-icon "circle-plus"}} Create New</button>

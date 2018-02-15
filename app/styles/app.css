@@ -1,0 +1,24 @@
+body {
+  font-family: system-ui, 
+               BlinkMacSystemFont, 
+               "Segoe UI", 
+               Roboto, 
+               Oxygen,
+               Ubuntu,
+               Cantarell,
+               "Open Sans",
+               "Helvetica Neue", 
+               sans-serif;
+}
+
+li span.checked {
+  text-decoration: line-through;
+}
+
+li .edit-link {
+  display: none;
+}
+
+li:hover .edit-link {
+  display: inline-block;
+}

@@ -1,0 +1,9 @@
+{{fa-icon (if item.checked "check-square-o" "square-o") 
+  fullWidth=true
+  click=(action 'checkItem' item)
+}}
+<span class="todo-text {{if item.checked "checked"}}">{{item.title}}</span>
+{{
+  fa-icon "pencil" class="pull-right edit-link"
+  click=(action (mut item.isEditing) true)
+}}
