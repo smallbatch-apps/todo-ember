@@ -9,4 +9,4 @@
     {{item.show onCheck=(action 'saveItem')}}
   {{/if}}
 {{/todo-list}}
-<button {{action 'createItem'}} class="btn btn-primary">{{fa-icon "circle-plus"}} Create New</button>
+{{todo-new onClick=(action 'createItem')}}
